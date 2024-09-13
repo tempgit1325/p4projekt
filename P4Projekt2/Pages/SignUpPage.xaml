@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P4Projekt2.Pages.SignUpPage"
+             xmlns:vm="clr-namespace:P4Projekt2.MVVM"
+             x:DataType="vm:SignUpPageViewModel"
+             Title="SignUpPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="18,82" Spacing="10">
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Text="Sign Up"
+                    VerticalOptions="Center" />
+
+                <Button
+                    Command="{Binding LoginCommand}"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Login" />
+            </StackLayout>
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="14"
+                HorizontalOptions="Start"
+                Text="Register to continue"
+                TextColor="#929292"
+                VerticalOptions="Center" />
+            <StackLayout Margin="0,50,0,0" Spacing="40">
+                <StackLayout Spacing="0">
+                    <Label
+                        FontSize="14"
+                        HorizontalOptions="Start"
+                        Text="First Name"
+                        TextColor="#929292"
+                        VerticalOptions="Center" />
+                    <Entry
+                        FontSize="18"
+                        Placeholder="Enter First Name"
+                        Text="{Binding FirstName_}" />
+                </StackLayout>
+                <StackLayout Spacing="0">
+                    <Label
+                        FontSize="14"
+                        HorizontalOptions="Start"
+                        Text="Last Name"
+                        TextColor="#929292"
+                        VerticalOptions="Center" />
+                    <Entry
+                        FontSize="18"
+                        Placeholder="Enter Last Name"
+                        Text="{Binding LastName_}" />
+                </StackLayout>
+                <StackLayout Spacing="0">
+                    <Label
+                        FontSize="14"
+                        HorizontalOptions="Start"
+                        Text="Email"
+                        TextColor="#929292"
+                        VerticalOptions="Center" />
+                    <Entry
+                        FontSize="18"
+                        Placeholder="Enter Email"
+                        Text="{Binding Email_}" />
+                </StackLayout>
+                <StackLayout Margin="0" Spacing="0">
+                    <Label
+                        FontSize="14"
+                        HorizontalOptions="Start"
+                        Text="Password"
+                        TextColor="#929292"
+                        VerticalOptions="Center" />
+                    <Entry
+                        FontSize="18"
+                        IsPassword="True"
+                        Placeholder="Enter Password"
+                        Text="{Binding Password_}" />
+                </StackLayout>
+            </StackLayout>
+            <Button
+                Margin="0,60"
+                Padding="16"
+                BackgroundColor="{DynamicResource Primary}"
+                Command="{Binding RegisterCommand}"
+                CornerRadius="4"
+                Text="SIGN UP"
+                TextColor="{DynamicResource White}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

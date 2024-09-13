@@ -1,0 +1,6 @@
+@LocalServerApi_HostAddress = https://localhost:5014
+
+GET {{LocalServerApi_HostAddress}}/doctormessageapp/
+Accept: application/json
+
+###
